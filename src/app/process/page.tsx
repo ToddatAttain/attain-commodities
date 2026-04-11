@@ -4,25 +4,16 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Process',
-  description: 'Attain Commodities five-step process: inquiry, qualification, alignment, transaction coordination, and execution.',
+  description: 'Attain Commodities five-step process: Qualification, Alignment, Structuring, Coordination, and Execution.',
   openGraph: {
     title: 'Process | Attain Commodities',
-    description: 'How we work: a structured five-step process from inquiry through execution.',
+    description: 'How we work: a structured five-step process from qualification through execution.',
   },
 };
 
 const steps = [
   {
     num: '01',
-    title: 'Inquiry',
-    description:
-      'Every engagement begins with a structured inquiry. You submit your requirements — product, volume, specifications, timeline, and target price range. The more detail you provide, the faster we can assess fit.',
-    detail: 'We review every submission. Not every inquiry will be a fit — and we will tell you if we don\'t think we can help. If there is a potential match, we move to the next stage.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
-    imageAlt: 'Initial inquiry and assessment',
-  },
-  {
-    num: '02',
     title: 'Qualification',
     description:
       'Before we proceed, we verify key information on both sides of the potential transaction. For buyers: financial standing and purchasing authority. For suppliers: product availability, quality certifications, and commercial track record.',
@@ -31,7 +22,7 @@ const steps = [
     imageAlt: 'Qualification and vetting process',
   },
   {
-    num: '03',
+    num: '02',
     title: 'Alignment',
     description:
       'Once both sides are qualified, we bring the parties together and align on commercial terms. Price, volume, delivery schedule, payment terms, inspection clauses, and governing law — all of these are confirmed before a transaction moves forward.',
@@ -40,10 +31,19 @@ const steps = [
     imageAlt: 'Alignment of commercial terms',
   },
   {
-    num: '04',
-    title: 'Transaction Coordination',
+    num: '03',
+    title: 'Structuring',
     description:
-      'With terms agreed, we coordinate the execution phase. This includes monitoring contract performance, facilitating communication between parties, tracking logistics, and managing documentation flow.',
+      'With terms aligned, we support the structuring of the transaction — contract frameworks, payment mechanisms, inspection protocols, and risk allocation. We work to ensure the deal is structured in a way that is clear, executable, and protects both parties.',
+    detail: 'Deal structure determines execution quality. We advise on contract structures, Incoterms selection, and documentation requirements so that both parties enter the execution phase with a solid foundation.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    imageAlt: 'Deal structuring and commercial frameworks',
+  },
+  {
+    num: '04',
+    title: 'Coordination',
+    description:
+      'With the deal structured, we coordinate the execution phase. This includes monitoring contract performance, facilitating communication between parties, tracking logistics, and managing documentation flow.',
     detail: 'We act as a central point of coordination — not a controlling authority. The buyer and supplier remain the contracting parties. Our role is to keep the transaction on track and flag any issues that arise.',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
     imageAlt: 'Transaction coordination and monitoring',
@@ -78,16 +78,60 @@ export default function ProcessPage() {
               Process
             </div>
             <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', lineHeight: 1.1, marginBottom: '1rem', color: 'var(--white)' }}>
-              A five-step process. No surprises.
+              Five steps. No surprises.
             </h1>
             <p style={{ fontSize: '1.0625rem', color: 'var(--gray-200)', lineHeight: 1.7 }}>
-              From your initial inquiry to final delivery, every engagement follows the same structured process — designed to create clarity and protect all parties.
+              Every engagement follows the same structured process — designed to create clarity and protect all parties from initial qualification through final execution.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Process Steps */}
+      {/* 5-Step Visual */}
+      <section style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', borderBottom: '1px solid var(--charcoal-muted)', padding: '4rem 1.5rem' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '0.75rem' }}>Overview</div>
+            <h2 style={{ fontSize: 'clamp(1.375rem, 2.5vw, 1.875rem)', color: 'var(--white)' }}>The Five Steps</h2>
+          </div>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(5, 1fr)',
+            gap: '0',
+            maxWidth: '900px',
+            margin: '0 auto',
+          }}>
+            {[
+              { num: '1', title: 'Qualification' },
+              { num: '2', title: 'Alignment' },
+              { num: '3', title: 'Structuring' },
+              { num: '4', title: 'Coordination' },
+              { num: '5', title: 'Execution' },
+            ].map((step) => (
+              <div key={step.num} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '0 0.25rem' }}>
+                <div style={{
+                  width: '2.75rem',
+                  height: '2.75rem',
+                  border: '1px solid var(--gold)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: '1rem',
+                  fontWeight: 700,
+                  color: 'var(--gold)',
+                  marginBottom: '0.875rem',
+                }}>
+                  {step.num}
+                </div>
+                <h4 style={{ fontSize: '0.75rem', color: 'var(--white)', fontFamily: 'Inter, sans-serif', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 600 }}>{step.title}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Steps Detail */}
       <section className="section">
         <div className="container">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem' }}>
@@ -169,10 +213,10 @@ export default function ProcessPage() {
         <div className="container-narrow">
           <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', marginBottom: '1rem' }}>Every transaction is different.</h2>
           <p style={{ fontSize: '0.9375rem', color: 'var(--gray-400)', lineHeight: 1.75, marginBottom: '1.5rem' }}>
-            A straightforward urea inquiry with pre-qualified parties may move through our process in days. A complex industrial commodity transaction with detailed specifications and logistics requirements may take weeks. We adapt the timeline to the transaction — not the other way around.
+            A straightforward urea inquiry with pre-qualified parties may move through our process in days. A complex transaction with detailed specifications and logistics requirements may take weeks. We adapt the timeline to the transaction — not the other way around.
           </p>
           <p style={{ fontSize: '0.875rem', color: 'var(--gray-600)', lineHeight: 1.7 }}>
-            <strong style={{ color: 'var(--gray-200)' }}>We do not guarantee a specific timeline for any transaction.</strong> What we guarantee is that we will move every qualified inquiry forward as quickly as the circumstances allow.
+            We do not guarantee a specific timeline for any transaction. What we guarantee is that we will move every qualified inquiry forward as quickly as the circumstances allow.
           </p>
         </div>
       </section>
@@ -182,9 +226,13 @@ export default function ProcessPage() {
         <div className="container-narrow">
           <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', marginBottom: '1rem' }}>Ready to begin?</h2>
           <p style={{ fontSize: '1rem', color: 'var(--gray-400)', lineHeight: 1.7, marginBottom: '2rem' }}>
-            Submit an inquiry through our structured intake process. We review every submission and respond to qualified inquiries within two business days.
+            Submit an inquiry through our structured intake process. Qualified inquiries receive a response within two business days.
           </p>
-          <Link href="/contact" className="btn-gold">Submit an Inquiry</Link>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+            <Link href="/contact?type=buyer" className="btn-gold">Buyer Inquiry</Link>
+            <Link href="/contact?type=supplier" className="btn-outline">Supplier Inquiry</Link>
+            <Link href="/contact?type=intermediary" className="btn-outline">Intermediary Inquiry</Link>
+          </div>
         </div>
       </section>
     </>

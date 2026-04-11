@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '/about', label: 'About' },
-  { href: '/capabilities', label: 'Capabilities' },
-  { href: '/markets', label: 'Markets' },
   { href: '/process', label: 'Process' },
+  { href: '/current-focus', label: 'Current Focus' },
+  { href: '/trust-compliance', label: 'Trust & Compliance' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -35,7 +35,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile nav — simplified */}
-        <Link href="/contact" className="btn-gold hidden md:inline-flex" style={{ padding: '0.5rem 1.25rem', fontSize: '0.75rem' }}>
+        <Link href="/contact?type=buyer" className="btn-gold hidden md:inline-flex" style={{ padding: '0.5rem 1.25rem', fontSize: '0.75rem' }}>
           Get in Touch
         </Link>
       </nav>
