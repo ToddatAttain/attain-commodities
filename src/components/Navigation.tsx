@@ -18,9 +18,7 @@ export default function Navigation() {
     <header style={{ backgroundColor: 'var(--charcoal)', borderBottom: '1px solid var(--charcoal-muted)' }}>
       <nav className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4.5rem' }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.125rem', fontWeight: 700, color: 'var(--white)', letterSpacing: '-0.01em' }}>
-            Attain<span style={{ color: 'var(--gold)' }}>Commodities</span>
-          </span>
+          <img src="/logo.png" alt="Attain Commodities" style={{ height: '2.5rem', width: 'auto' }} />
         </Link>
 
         {/* Desktop nav */}
