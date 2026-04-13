@@ -99,32 +99,33 @@ export async function POST(request: NextRequest) {
     // To enable email notifications, set RESEND_API_KEY and RESEND_FROM_EMAIL in your .env file
     // and uncomment the block below.
     //
-    // const resendApiKey = process.env.RESEND_API_KEY;
-    // const resendFromEmail = process.env.RESEND_FROM_EMAIL || 'Attain Commodities <onboarding@resend.dev>';
-    //
-    // if (resendApiKey) {
-    //   await fetch('https://api.resend.com/emails', {
-    //     method: 'POST',
-    //     headers: {
-    //       Authorization: `Bearer ${resendApiKey}`,
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       from: resendFromEmail,
-    //       to: ['commodities@attainbrands.com'],
-    //       subject: `New Inquiry: ${sanitized.inquiryType} from ${sanitized.name}`,
-    //       text: [
-    //         `Name: ${sanitized.name}`,
-    //         `Email: ${sanitized.email}`,
-    //         `Company: ${sanitized.company || 'N/A'}`,
-    //         `Phone: ${sanitized.phone || 'N/A'}`,
-    //         `Inquiry Type: ${sanitized.inquiryType}`,
-    //         `Commodity: ${sanitized.commodity || 'N/A'}`,
-    //         `\nMessage:\n${sanitized.message}`,
-    //       ].join('\n'),
-    //     }),
-    //   });
-    // }
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const resendFromEmail = process.env.RESEND_FROM_EMAIL || 'Attain Commodities <onboarding@resend.dev>';
+    const resendToEmail = process.env.RESEND_TO_EMAIL || 'info@attaincommodities.com';
+
+    if (resendApiKey) {
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${resendApiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: resendFromEmail,
+          to: [resendToEmail],
+          subject: `New Inquiry: ${sanitized.inquiryType} from ${sanitized.name}`,
+          text: [
+            `Name: ${sanitized.name}`,
+            `Email: ${sanitized.email}`,
+            `Company: ${sanitized.company || 'N/A'}`,
+            `Phone: ${sanitized.phone || 'N/A'}`,
+            `Inquiry Type: ${sanitized.inquiryType}`,
+            `Commodity: ${sanitized.commodity || 'N/A'}`,
+            `\nMessage:\n${sanitized.message}`,
+          ].join('\n'),
+        }),
+      });
+    }
 
     return NextResponse.json({ success: true, message: 'Inquiry received. We will respond within two business days.' });
   } catch (err) {
