@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
 const inquiryTypes = [
@@ -12,8 +11,7 @@ const inquiryTypes = [
 
 const commodityAreas = [
   'Fertilizer / Urea',
-  'Energy / Crude Oil',
-  'Industrial Commodities',
+  'Energy / Nigerian Light Crude',
   'Multiple / Not Sure',
 ];
 
@@ -75,10 +73,10 @@ export default function ContactForm() {
         <div style={{ width: '3rem', height: '3rem', border: '1px solid var(--gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: 'var(--gold)', fontSize: '1.25rem', fontWeight: 700 }}>✓</div>
         <h3 style={{ fontSize: '1.375rem', color: 'var(--white)', marginBottom: '1rem' }}>Inquiry received.</h3>
         <p style={{ fontSize: '0.9375rem', color: 'var(--gray-400)', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-          Thank you for your submission. We will review your inquiry and respond within two business days.
+          Thank you for your submission. We will review your inquiry and respond within two business days if it meets our qualification requirements.
         </p>
         <p style={{ fontSize: '0.8125rem', color: 'var(--gray-600)', lineHeight: 1.6 }}>
-          Qualified inquiries receive a response within two business days. Incomplete or unqualified submissions may not receive a response.
+          Incomplete or unqualified submissions may not receive a response.
         </p>
       </div>
     );
@@ -119,7 +117,7 @@ export default function ContactForm() {
             id="inquiryType"
             name="inquiryType"
             required
-            defaultValue={preSelectedType ? inquiryTypes.find(t => t.value === preSelectedType)?.label || '' : ''}
+            defaultValue={preSelectedType ? inquiryTypes.find(t => t.value === preSelectedType)?.value || '' : ''}
             style={{ cursor: 'pointer' }}
           >
             <option value="" disabled>Select type</option>
@@ -145,7 +143,7 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows={6}
-          placeholder="Describe your requirements in as much detail as possible. Include product specifications, estimated volume, target delivery timeline, and any other relevant information."
+          placeholder="Include: product and specification, estimated volume, target delivery timeline, destination, and preferred pricing basis (FOB, CIF, or indexed)."
           required
           style={{ resize: 'vertical', minHeight: '120px' }}
         />

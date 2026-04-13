@@ -5,66 +5,53 @@ import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Submit an inquiry to Attain Commodities. We facilitate structured commodity transactions for qualified buyers, suppliers, and intermediaries.',
+  description: 'Submit an inquiry to Attain Commodities. Serious inquiries only — qualified buyers, suppliers, and intermediaries.',
   openGraph: {
     title: 'Contact | Attain Commodities',
     description: 'Submit an inquiry for fertilizer or select energy commodity transactions.',
   },
 };
 
-const steps = [
-  ['1. Submission', 'Your inquiry is received and logged.'],
-  ['2. Review', 'We review against our current capabilities and market channels.'],
-  ['3. Response', 'Qualified inquiries receive a response within two business days.'],
-  ['4. Qualification', 'We may ask additional questions or request documentation.'],
-  ['5. Process', 'If qualified, we begin our structured engagement process.'],
-];
-
 const requirements = [
-  'Product and specification',
-  'Volume',
-  'Delivery timeline',
-  'Destination',
-  'Buyer mandate or supplier proof',
-  'Preferred pricing structure (FOB, CIF, etc.)',
+  'Product specifications and volume requirements',
+  'Delivery timeline and destination',
+  'Pricing basis (FOB, CIF, or indexed)',
 ];
 
 function ContactSidebar() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
       <div>
-        <div style={{ fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>What happens next</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          {steps.map(([title, desc]) => (
-            <div key={title}>
-              <div style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--gray-200)', marginBottom: '0.25rem' }}>{title}</div>
-              <p style={{ fontSize: '0.8125rem', color: 'var(--gray-600)', lineHeight: 1.6, margin: 0 }}>{desc}</p>
+        <div style={{ fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Inquiries</div>
+        <p style={{ fontSize: '0.9375rem', color: 'var(--gray-200)', lineHeight: 1.7 }}>
+          Serious inquiries only. We engage with qualified buyers and suppliers.
+        </p>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--charcoal-muted)', paddingTop: '2rem' }}>
+        <div style={{ fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>What to include</div>
+        <p style={{ fontSize: '0.8125rem', color: 'var(--gray-600)', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+          To submit an inquiry, provide:
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+          {requirements.map((item) => (
+            <div key={item} style={{ display: 'flex', gap: '0.625rem', alignItems: 'flex-start' }}>
+              <div style={{ width: '4px', height: '4px', backgroundColor: 'var(--gold)', marginTop: '0.4rem', flexShrink: 0 }} />
+              <span style={{ fontSize: '0.875rem', color: 'var(--gray-400)', lineHeight: 1.5 }}>{item}</span>
             </div>
           ))}
         </div>
       </div>
 
       <div style={{ borderTop: '1px solid var(--charcoal-muted)', paddingTop: '2rem' }}>
-        <div style={{ fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Response Expectations</div>
+        <div style={{ fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Response expectations</div>
         <p style={{ fontSize: '0.8125rem', color: 'var(--gray-600)', lineHeight: 1.7 }}>
           Qualified inquiries receive a response within two business days. Incomplete or unqualified submissions may not receive a response.
         </p>
       </div>
 
       <div style={{ borderTop: '1px solid var(--charcoal-muted)', paddingTop: '2rem' }}>
-        <div style={{ fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>What We Require to Engage</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          {requirements.map((item) => (
-            <div key={item} style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-              <div style={{ width: '4px', height: '4px', backgroundColor: 'var(--gold)', marginTop: '0.4rem', flexShrink: 0 }} />
-              <span style={{ fontSize: '0.8125rem', color: 'var(--gray-400)', lineHeight: 1.5 }}>{item}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div style={{ borderTop: '1px solid var(--charcoal-muted)', paddingTop: '2rem' }}>
-        <div style={{ fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Direct Contact</div>
+        <div style={{ fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Direct contact</div>
         <p style={{ fontSize: '0.875rem', color: 'var(--gray-400)', lineHeight: 1.7 }}>
           info@attaincommodities.com
         </p>
@@ -97,7 +84,7 @@ export default function ContactPage() {
               Submit an inquiry.
             </h1>
             <p style={{ fontSize: '1.0625rem', color: 'var(--gray-200)', lineHeight: 1.7 }}>
-              Complete the form with your requirements. Qualified inquiries receive a response within two business days.
+              Serious inquiries only. We engage with qualified buyers and suppliers. Provide product, volume, delivery timeline, and pricing basis.
             </p>
           </div>
         </div>
