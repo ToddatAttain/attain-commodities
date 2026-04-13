@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Attain Commodities — Structured Commodity Sourcing & Transaction Coordination',
-  description: 'Attain Commodities facilitates structured commodity transactions for qualified buyers, suppliers, and intermediaries. Focused on fertilizer and selected energy markets. A division of Attain Brands, LLC.',
+  title: 'Attain Commodities — Fertilizer & Energy Commodity Transactions',
+  description: 'Committed to fertilizer and energy commodity transactions. Focused on urea and selected energy transactions for qualified buyers and suppliers.',
   openGraph: {
-    title: 'Attain Commodities — Structured Commodity Sourcing & Transaction Coordination',
-    description: 'Focused on fertilizer and selected energy transactions. All counterparties subject to qualification and compliance review.',
+    title: 'Attain Commodities — Fertilizer & Energy Transactions',
+    description: 'Focused on urea and selected energy transactions for qualified buyers and suppliers.',
   },
 };
 
@@ -37,122 +37,43 @@ export default function HomePage() {
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ maxWidth: '700px' }}>
             <h1 style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.5rem)', lineHeight: 1.15, marginBottom: '1.5rem', color: 'var(--white)' }}>
-              Structured commodity sourcing and transaction coordination for qualified buyers, suppliers, and intermediaries.
+              Committed to fertilizer and energy commodity transactions.
             </h1>
             <div className="divider" />
-            <p style={{ fontSize: '1.0625rem', color: 'var(--gray-200)', lineHeight: 1.7, maxWidth: '560px', marginBottom: '1rem' }}>
-              Focused on fertilizer and selected energy transactions.
-            </p>
-            <p style={{ fontSize: '0.8125rem', color: 'var(--gray-400)', lineHeight: 1.6, marginBottom: '2.5rem' }}>
-              A division of Attain Brands, LLC
-            </p>
-            <p style={{ fontSize: '0.75rem', color: 'var(--gray-600)', lineHeight: 1.6, marginBottom: '2.5rem', letterSpacing: '0.03em' }}>
-              All counterparties subject to qualification and compliance review.
+            <p style={{ fontSize: '1.0625rem', color: 'var(--gray-200)', lineHeight: 1.7, maxWidth: '560px', marginBottom: '2.5rem' }}>
+              Focused on urea and selected energy transactions for qualified buyers and suppliers.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
               <Link href="/contact?type=buyer" className="btn-gold">
-                Buyer Inquiry
+                Request Pricing
               </Link>
-              <Link href="/contact?type=supplier" className="btn-outline">
-                Supplier Inquiry
-              </Link>
-              <Link href="/contact?type=intermediary" className="btn-outline">
-                Intermediary Inquiry
+              <Link href="/contact?type=buyer" className="btn-outline">
+                Submit Buyer Inquiry
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How We Operate */}
-      <section className="section" style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', borderBottom: '1px solid var(--charcoal-muted)' }}>
-        <div className="container">
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1.5rem' }}>How We Operate</div>
-            <p style={{ fontSize: '1.0625rem', color: 'var(--gray-200)', lineHeight: 1.8 }}>
-              Attain Commodities facilitates structured transactions between qualified buyers, suppliers, and intermediaries. We identify aligned counterparties, support deal structuring, and coordinate execution through to completion. We do not take title to goods, hold inventory, provide financing, or operate as a logistics provider.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Work With Us */}
-      <section className="section">
+      {/* What We Transact */}
+      <section className="section" style={{ borderTop: '1px solid var(--charcoal-muted)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Our Approach</div>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: 'var(--white)', marginBottom: '1rem' }}>Why Work With Attain Commodities</h2>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
-            {[
-              ['Structured qualification process', 'Every counterparty is vetted before engagement. We ask direct questions and expect direct answers.'],
-              ['Access to vetted counterparties', 'Buyers and suppliers who have already cleared our qualification process.'],
-              ['Efficient transaction coordination', 'We manage the process between parties — keeping deals moving without the noise.'],
-              ['Reduced wasted time and misaligned deals', 'Qualification happens upfront. If we are talking, there is a real potential fit.'],
-              ['Clear, professional communication', 'One point of contact. Structured updates. No ambiguity about where things stand.'],
-            ].map(([title, desc]) => (
-              <div key={title} className="card">
-                <div style={{ width: '2rem', height: '2px', backgroundColor: 'var(--gold)', marginBottom: '1rem' }} />
-                <h3 style={{ fontSize: '1.0625rem', color: 'var(--white)', marginBottom: '0.625rem' }}>{title}</h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--gray-400)', lineHeight: 1.7 }}>{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What We Require to Engage */}
-      <section className="section" style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', borderBottom: '1px solid var(--charcoal-muted)' }}>
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
-            <div>
-              <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>For New Inquiries</div>
-              <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', marginBottom: '1.5rem' }}>What We Require to Engage</h2>
-              <p style={{ fontSize: '0.9375rem', color: 'var(--gray-400)', lineHeight: 1.75, marginBottom: '1.5rem' }}>
-                To assess fit, we ask that every inquiry include the following:
-              </p>
-              <Link href="/contact" className="btn-gold">Submit an Inquiry</Link>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              {[
-                'Product and specification',
-                'Volume',
-                'Delivery timeline',
-                'Destination',
-                'Buyer mandate or supplier proof',
-                'Preferred pricing structure (FOB, CIF, etc.)',
-              ].map((item) => (
-                <div key={item} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                  <div style={{ width: '6px', height: '6px', backgroundColor: 'var(--gold)', marginTop: '0.5rem', flexShrink: 0 }} />
-                  <span style={{ fontSize: '0.9375rem', color: 'var(--gray-200)', lineHeight: 1.6 }}>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Current Focus — Market Highlight */}
-      <section className="section">
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Current Focus</div>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: 'var(--white)', marginBottom: '1rem' }}>Where We Are Active</h2>
-            <p style={{ fontSize: '1rem', color: 'var(--gray-400)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
-              Our primary focus is fertilizer — specifically urea. Select energy and industrial transactions are considered on a case-by-case basis.
-            </p>
+            <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>What We Transact</div>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: 'var(--white)' }}>Product Overview</h2>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+            {/* Fertilizer */}
             <div className="card" style={{ borderColor: 'var(--gold)' }}>
-              <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '0.75rem' }}>Primary Focus</div>
-              <h3 style={{ fontSize: '1.25rem', color: 'var(--white)', marginBottom: '1rem' }}>Fertilizer</h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+              <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '0.75rem' }}>Fertilizer</div>
+              <h3 style={{ fontSize: '1.25rem', color: 'var(--white)', marginBottom: '1.25rem' }}>Granular Urea 46%</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  'Granular Urea (46%)',
-                  'Bulk shipments',
-                  'International sourcing and delivery',
+                  'Prilled / Granular available',
+                  'Bulk and bagged delivery',
+                  'FOB / RFQ structure',
+                  'NOLA indexed pricing where applicable',
                 ].map((item) => (
                   <div key={item} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                     <div style={{ width: '4px', height: '4px', backgroundColor: 'var(--gold)', marginTop: '0.45rem', flexShrink: 0 }} />
@@ -162,14 +83,15 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* Energy */}
             <div className="card">
-              <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gray-400)', marginBottom: '0.75rem' }}>Secondary — Select Transactions</div>
-              <h3 style={{ fontSize: '1.25rem', color: 'var(--white)', marginBottom: '1rem' }}>Energy</h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+              <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gray-400)', marginBottom: '0.75rem' }}>Energy</div>
+              <h3 style={{ fontSize: '1.25rem', color: 'var(--white)', marginBottom: '1.25rem' }}>Nigerian Light Crude</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  'Light crude (select transactions only)',
-                  'Established channels and counterparties',
-                  'Case-by-case assessment',
+                  'Select transactions only',
+                  'Buyer qualification required',
+                  'Structured engagement process',
                 ].map((item) => (
                   <div key={item} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                     <div style={{ width: '4px', height: '4px', backgroundColor: 'var(--gray-600)', marginTop: '0.45rem', flexShrink: 0 }} />
@@ -177,57 +99,89 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: '0.75rem', color: 'var(--gray-600)', lineHeight: 1.6, marginTop: '1rem' }}>
-                Not all energy inquiries will be a fit. We assess each based on counterparty quality, transaction structure, and jurisdiction.
-              </p>
             </div>
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link href="/current-focus" className="btn-outline">View Full Focus Areas</Link>
+          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link href="/current-focus" className="btn-outline">View Full Specifications</Link>
           </div>
         </div>
       </section>
 
-      {/* Process Overview — 5 Step Visual */}
+      {/* Why Attain Commodities */}
+      <section className="section" style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', borderBottom: '1px solid var(--charcoal-muted)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Why Attain Commodities</div>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            {[
+              'Direct access to urea supply across international channels.',
+              'Structured transactions with clear commercial terms.',
+              'Rigorous counterparty qualification — we engage verified buyers and suppliers.',
+              'Execution-focused — from inquiry to contract to delivery.',
+            ].map((point, i) => (
+              <div key={i} className="card">
+                <div style={{ width: '2rem', height: '2px', backgroundColor: 'var(--gold)', marginBottom: '1rem' }} />
+                <p style={{ fontSize: '0.9375rem', color: 'var(--gray-200)', lineHeight: 1.7 }}>{point}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Transaction Readiness */}
+      <section className="section">
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
+            <div>
+              <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Transaction Readiness</div>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', marginBottom: '1.5rem' }}>Before we engage, we expect counterparties to provide:</h2>
+              <Link href="/contact" className="btn-gold">Submit an Inquiry</Link>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {[
+                'Product specifications and volume requirements',
+                'Delivery timeline and destination',
+                'Pricing basis (FOB, CIF, or indexed)',
+              ].map((item) => (
+                <div key={item} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ width: '6px', height: '6px', backgroundColor: 'var(--gold)', marginTop: '0.5rem', flexShrink: 0 }} />
+                  <span style={{ fontSize: '0.9375rem', color: 'var(--gray-200)', lineHeight: 1.6 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ marginTop: '2rem', padding: '1.25rem', border: '1px solid var(--charcoal-muted)', backgroundColor: 'var(--charcoal-light)' }}>
+            <p style={{ fontSize: '0.875rem', color: 'var(--gray-400)', lineHeight: 1.7, margin: 0 }}>
+              Unqualified inquiries may not receive a response.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Transaction Process — 6 Step */}
       <section className="section" style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', borderBottom: '1px solid var(--charcoal-muted)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>How We Work</div>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: 'var(--white)', marginBottom: '1rem' }}>The Process</h2>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', color: 'var(--white)' }}>Transaction Process</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '0', position: 'relative' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', maxWidth: '900px', margin: '0 auto' }}>
             {[
-              { num: '1', title: 'Qualification' },
-              { num: '2', title: 'Alignment' },
-              { num: '3', title: 'Structuring' },
-              { num: '4', title: 'Coordination' },
-              { num: '5', title: 'Execution' },
-            ].map((step, i) => (
-              <div key={step.num} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', position: 'relative', padding: '0 0.5rem' }}>
-                {i < 4 && (
-                  <div style={{ position: 'absolute', top: '1.5rem', right: '-50%', width: '100%', height: '1px', backgroundColor: 'var(--charcoal-muted)', zIndex: 0, display: 'none' }} />
-                )}
-                <div style={{
-                  width: '3rem',
-                  height: '3rem',
-                  border: '1px solid var(--gold)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: '1.125rem',
-                  fontWeight: 700,
-                  color: 'var(--gold)',
-                  marginBottom: '1rem',
-                  position: 'relative',
-                  zIndex: 1,
-                  backgroundColor: 'var(--charcoal-light)',
-                }}>
-                  {step.num}
-                </div>
-                <h4 style={{ fontSize: '0.875rem', color: 'var(--white)', fontFamily: 'Inter, sans-serif', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 600 }}>{step.title}</h4>
+              { num: '01', title: 'Buyer Inquiry', desc: 'Submit inquiry with product, volume, and delivery terms.' },
+              { num: '02', title: 'Qualification', desc: 'Commercial team reviews and validates counterparty status.' },
+              { num: '03', title: 'Indicative Offer', desc: 'Indicative offer or terms sheet provided to qualified buyer.' },
+              { num: '04', title: 'Verification', desc: 'Proof of funds or mandate verification.' },
+              { num: '05', title: 'Contract', desc: 'Contract execution (SPA or Master Agreement).' },
+              { num: '06', title: 'Delivery', desc: 'Logistics and shipment coordination to destination.' },
+            ].map((step) => (
+              <div key={step.num} className="card">
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 700, color: 'var(--gold)', marginBottom: '0.75rem' }}>{step.num}</div>
+                <h3 style={{ fontSize: '1rem', color: 'var(--white)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{step.title}</h3>
+                <p style={{ fontSize: '0.875rem', color: 'var(--gray-400)', lineHeight: 1.65 }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -249,9 +203,8 @@ export default function HomePage() {
             Submit an inquiry through our structured intake process. Qualified inquiries receive a response within two business days.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-            <Link href="/contact?type=buyer" className="btn-gold">Buyer Inquiry</Link>
-            <Link href="/contact?type=supplier" className="btn-outline">Supplier Inquiry</Link>
-            <Link href="/contact?type=intermediary" className="btn-outline">Intermediary Inquiry</Link>
+            <Link href="/contact?type=buyer" className="btn-gold">Request Pricing</Link>
+            <Link href="/contact?type=buyer" className="btn-outline">Submit Buyer Inquiry</Link>
           </div>
         </div>
       </section>

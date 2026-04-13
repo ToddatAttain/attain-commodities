@@ -4,29 +4,29 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Attain Commodities is a DBA of Attain Brands, LLC — a structured commodity sourcing and transaction coordination firm focused on fertilizer and selected energy markets.',
+  description: 'Attain Commodities is a DBA of Attain Brands, LLC — a structured commodity transaction facilitator focused on fertilizer and selected energy markets.',
   openGraph: {
     title: 'About Attain Commodities',
-    description: 'A structured commodity sourcing and transaction coordination firm. A DBA of Attain Brands, LLC.',
+    description: 'We facilitate commodity transactions between qualified buyers and verified suppliers. A DBA of Attain Brands, LLC.',
   },
 };
 
 const values = [
   {
-    title: 'Integrity',
-    description: 'We represent what we can deliver and deliver what we represent. Exaggeration damages long-term relationships — we don\'t do it.',
+    title: 'Discipline',
+    description: 'We follow a structured process and do not cut corners on qualification or compliance. Every transaction earns its place.',
   },
   {
-    title: 'Structure',
-    description: 'Every inquiry, qualification, and transaction follows a defined process. Structure reduces risk and creates accountability for all parties.',
+    title: 'Execution',
+    description: 'We are focused on getting deals done — from first inquiry through to delivery. Talking is not doing. We prefer to deliver.',
   },
   {
     title: 'Clarity',
-    description: 'We communicate clearly and directly. Ambiguity in commodity trading is expensive. We work to eliminate it at every stage.',
+    description: 'We communicate directly and expect the same from counterparties. Ambiguity in commodity trading is expensive and we work to eliminate it.',
   },
   {
     title: 'Precision',
-    description: 'Commodity transactions are complex. We pay close attention to specifications, terms, logistics, and timelines — because details matter.',
+    description: 'Details matter in commodity transactions. Specifications, terms, logistics, and timelines receive close attention at every stage.',
   },
 ];
 
@@ -52,32 +52,14 @@ export default function AboutPage() {
               Structured execution. Disciplined deal flow.
             </h1>
             <p style={{ fontSize: '1.0625rem', color: 'var(--gray-200)', lineHeight: 1.7 }}>
-              We are Attain Commodities — a DBA of Attain Brands, LLC. Our role is to facilitate commodity transactions between qualified buyers and verified suppliers.
+              We are Attain Commodities — a DBA of Attain Brands, LLC. We operate as a transaction facilitator, not a principal. Our role is to bring qualified buyers and verified suppliers together and coordinate execution through to delivery.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Leadership */}
+      {/* Who We Are */}
       <section className="section" style={{ borderTop: '1px solid var(--charcoal-muted)' }}>
-        <div className="container">
-          <div style={{ maxWidth: '720px', margin: '0 auto' }}>
-            <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Leadership</div>
-            <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', marginBottom: '2rem' }}>Founder</h2>
-            <div className="prose">
-              <p>
-                The founder brings experience in operations, government, and large-scale program leadership to Attain Commodities. The focus is on applying structured execution discipline to commodity sourcing and transaction coordination — with an emphasis on doing fewer things well, maintaining quality counterparties, and executing transactions cleanly.
-              </p>
-              <p>
-                The Attain Brands platform provides administrative and operational infrastructure, allowing Attain Commodities to concentrate on its core mission: facilitating transactions between qualified buyers, suppliers, and intermediaries in fertilizer and selected energy markets.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Overview */}
-      <section className="section" style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', borderBottom: '1px solid var(--charcoal-muted)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '5rem', alignItems: 'center' }}>
             <div>
@@ -87,10 +69,10 @@ export default function AboutPage() {
               </h2>
               <div className="prose">
                 <p>
-                  Attain Commodities was established as a DBA of Attain Brands, LLC to formalize and grow the firm&apos;s commodity trading activities. The Attain Brands platform provides administrative, legal, and operational infrastructure — allowing Attain Commodities to focus on its core mission: facilitating transactions.
+                  Attain Commodities is a DBA of Attain Brands, LLC. We facilitate commodity transactions between qualified buyers, verified suppliers, and intermediaries. We do not take title to goods, hold inventory, provide financing, or operate as a logistics provider.
                 </p>
                 <p>
-                  We are a focused team that prioritizes relationship quality over transaction volume. We work with buyers, suppliers, and intermediaries who value a structured, professional approach to commodity sourcing and sales.
+                  Our focus is fertilizer — specifically granular urea (46%) — and select energy transactions, primarily Nigerian Light Crude. We work with counterparties who value a structured, professional approach to commodity sourcing and execution.
                 </p>
               </div>
             </div>
@@ -106,12 +88,96 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* Operating Position */}
+      <section className="section" style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', borderBottom: '1px solid var(--charcoal-muted)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Operating Position</div>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)' }}>What we are and what we are not.</h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2rem' }}>
+            {[
+              {
+                label: 'We Are',
+                color: 'var(--gold)',
+                items: [
+                  'A transaction facilitator',
+                  'Focused on urea and select energy',
+                  'Disciplined about counterparty qualification',
+                  'Clear about transaction structure and terms',
+                ],
+              },
+              {
+                label: 'We Are Not',
+                color: 'var(--gray-400)',
+                items: [
+                  'A principal or risk holder',
+                  'A logistics or freight provider',
+                  'A financier or credit provider',
+                  'Active in every commodity or market',
+                ],
+              },
+            ].map(({ label, color, items }) => (
+              <div key={label} className="card">
+                <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color, marginBottom: '1.25rem' }}>{label}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  {items.map((item) => (
+                    <div key={item} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                      <div style={{ width: '4px', height: '4px', backgroundColor: color, marginTop: '0.45rem', flexShrink: 0 }} />
+                      <span style={{ fontSize: '0.9rem', color: 'var(--gray-400)', lineHeight: 1.6 }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance & Legal */}
       <section className="section">
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
+            <div>
+              <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Compliance</div>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', marginBottom: '1.5rem' }}>Our operating standards.</h2>
+              <div className="prose">
+                <p>
+                  All counterparties are subject to compliance review before engagement. We do not facilitate transactions involving restricted parties, sanctioned jurisdictions, or prohibited products under applicable trade laws.
+                </p>
+                <p>
+                  We do not take title to goods. We operate as a transaction facilitator, not a principal. This structure allows us to focus on deal execution without assuming inventory or credit risk.
+                </p>
+                <p>
+                  Attain Commodities is a division of Attain Brands, LLC.
+                </p>
+              </div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              {[
+                'We do not take title to goods.',
+                'We operate as a transaction facilitator, not a principal.',
+                'All counterparties subject to compliance review.',
+                'Attain Commodities is a division of Attain Brands, LLC.',
+              ].map((item) => (
+                <div key={item} className="card" style={{ padding: '1.25rem 1.5rem' }}>
+                  <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                    <div style={{ width: '1px', height: '100%', minHeight: '1.25rem', backgroundColor: 'var(--gold)', marginTop: '0.2rem', flexShrink: 0 }} />
+                    <span style={{ fontSize: '0.9375rem', color: 'var(--gray-200)', lineHeight: 1.6 }}>{item}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <section className="section" style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', borderBottom: '1px solid var(--charcoal-muted)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div style={{ fontSize: '0.6875rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--gold)', marginBottom: '1rem' }}>Philosophy</div>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', color: 'var(--white)', marginBottom: '1rem' }}>How we operate.</h2>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', color: 'var(--white)' }}>How we operate.</h2>
           </div>
 
           <div className="prose" style={{ maxWidth: '720px', margin: '0 auto 3rem' }}>
@@ -120,9 +186,6 @@ export default function AboutPage() {
             </p>
             <p style={{ textAlign: 'center' }}>
               We believe in doing fewer things well. We are selective about the counterparties we work with and the transactions we pursue. This selectivity protects our credibility and ensures we can deliver on what we commit to.
-            </p>
-            <p style={{ textAlign: 'center' }}>
-              We do not make guarantees we cannot keep. We do not oversell our capabilities. When we say we can help, it means we have a credible path to a transaction. That is the reputation we are building.
             </p>
           </div>
 
@@ -139,11 +202,11 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-sm" style={{ backgroundColor: 'var(--charcoal-light)', borderTop: '1px solid var(--charcoal-muted)', textAlign: 'center' }}>
+      <section className="section-sm" style={{ textAlign: 'center' }}>
         <div className="container-narrow">
           <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', marginBottom: '1rem' }}>Work with us.</h2>
           <p style={{ fontSize: '1rem', color: 'var(--gray-400)', lineHeight: 1.7, marginBottom: '2rem' }}>
-            We welcome inquiries from qualified buyers, suppliers, and intermediaries. If you have a legitimate commodity need, we want to hear from you.
+            We welcome inquiries from qualified buyers, suppliers, and intermediaries who are prepared to provide the information required for a substantive engagement.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
             <Link href="/contact?type=buyer" className="btn-gold">Buyer Inquiry</Link>
