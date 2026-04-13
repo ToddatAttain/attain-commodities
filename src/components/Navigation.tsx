@@ -18,7 +18,7 @@ export default function Navigation() {
     <header style={{ backgroundColor: 'var(--charcoal)', borderBottom: '1px solid var(--charcoal-muted)' }}>
       <nav className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4.5rem' }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <img src="/logo.png" alt="Attain Commodities" style={{ height: '2.5rem', width: 'auto', mixBlendMode: 'multiply' }} />
+          <img src="/logo.png" alt="Attain Commodities" style={{ height: '2.5rem', width: 'auto' }} />
         </Link>
 
         {/* Desktop nav */}
